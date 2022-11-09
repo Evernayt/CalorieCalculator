@@ -1,3 +1,4 @@
-import Home from './Home';
+import Calculator from './Calculator';
+import Result from './Result';
 
-export {Home};
+export {Calculator, Result};

@@ -14,7 +14,7 @@ const GENDERS: IRadioButtonItem[] = [
   },
 ];
 
-const ACTIVENESS: ICircleRadioButton[] = [
+const ACTIVITIES: ICircleRadioButton[] = [
   {
     label: 'Minimum',
     value: 0,
@@ -42,4 +42,4 @@ const ACTIVENESS: ICircleRadioButton[] = [
   },
 ];
 
-export {DEF_URL, GENDERS, ACTIVENESS};
+export {DEF_URL, GENDERS, ACTIVITIES};

@@ -4,16 +4,22 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import DeviceInfo from 'react-native-device-info';
 import {FIREBASE_URL_KEY} from './src/constants/storage';
 import {WebComponent} from './src/components';
-import {Home} from './src/screens';
+import {Calculator, Result} from './src/screens';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {HOME_ROUTE} from './src/constants/routes';
+import {CALCULATOR_ROUTE, RESULT_ROUTE} from './src/constants/routes';
 import SplashScreen from 'react-native-splash-screen';
 import {View} from 'react-native';
 import {DEF_URL} from './src/constants/app';
 
 export type RootStackParamList = {
-  HOME_ROUTE: undefined;
+  CALCULATOR_ROUTE: undefined;
+  RESULT_ROUTE: {
+    calories: number;
+    fat: number;
+    protein: number;
+    carbohydrate: number;
+  };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -22,18 +28,17 @@ const App = () => {
   const [url, setUrl] = useState<string>(DEF_URL);
 
   useEffect(() => {
-    SplashScreen.hide();
-    // AsyncStorage.getItem(FIREBASE_URL_KEY).then(path => {
-    //   remoteConfig()
-    //     .fetchAndActivate()
-    //     .then(() => loadFire(path));
-    // });
+    AsyncStorage.getItem(FIREBASE_URL_KEY).then(path => {
+      remoteConfig()
+        .fetchAndActivate()
+        .then(() => loadFire(path));
+    });
   }, []);
 
   useEffect(() => {
-    // if (url !== DEF_URL) {
-    //   SplashScreen.hide();
-    // }
+    if (url !== DEF_URL) {
+      SplashScreen.hide();
+    }
   }, [url]);
 
   const loadFire = (path: string | null) => {
@@ -64,27 +69,16 @@ const App = () => {
             screenOptions={{
               headerShown: false,
             }}
-            initialRouteName={HOME_ROUTE}>
-            <Stack.Screen name={HOME_ROUTE} component={Home} />
+            initialRouteName={CALCULATOR_ROUTE}>
+            <Stack.Screen name={CALCULATOR_ROUTE} component={Calculator} />
+            <Stack.Screen name={RESULT_ROUTE} component={Result} />
           </Stack.Navigator>
         </NavigationContainer>
       );
     }
   };
 
-  return (
-    <View style={{flex: 1}}>
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            headerShown: false,
-          }}
-          initialRouteName={HOME_ROUTE}>
-          <Stack.Screen name={HOME_ROUTE} component={Home} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </View>
-  );
+  return <View style={{flex: 1}}>{renderByUrl()}</View>;
 };
 
 export default App;

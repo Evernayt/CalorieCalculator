@@ -1,9 +1,8 @@
 import {FC, useState} from 'react';
-import {Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import RadioForm, {
   RadioButton,
   RadioButtonInput,
-  RadioButtonLabel,
 } from 'react-native-simple-radio-button';
 import {COLORS} from '../../constants/theme';
 import {ICircleRadioButton} from '../../models/ICircleRadioButton';
@@ -37,22 +36,31 @@ const CircleRadioButton: FC<CircleRadioButtonProps> = ({items, onChange}) => {
               selectedIndex === index ? COLORS.primary : COLORS.secondary
             }
           />
-          <View>
-            <RadioButtonLabel
-              obj={item}
-              index={index}
-              labelHorizontal={true}
-              labelStyle={{color: COLORS.primaryText}}
-              onPress={() => changeHandler(item, index)}
-            />
+          <TouchableOpacity
+            style={styles.labelContainer}
+            onPress={() => changeHandler(item, index)}>
+            <Text style={styles.label}>{item.label}</Text>
             {item.description && (
-              <Text style={{marginLeft: 10}}>{item.description}</Text>
+              <Text style={styles.description}>{item.description}</Text>
             )}
-          </View>
+          </TouchableOpacity>
         </RadioButton>
       ))}
     </RadioForm>
   );
 };
+
+const styles = StyleSheet.create({
+  labelContainer: {
+    marginLeft: 10,
+    paddingRight: 24,
+  },
+  label: {
+    color: COLORS.primaryText,
+  },
+  description: {
+    color: COLORS.secondaryText,
+  },
+});
 
 export default CircleRadioButton;

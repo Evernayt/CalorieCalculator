@@ -38,7 +38,7 @@ const RectRadioButton: FC<RectRadioButtonProps> = ({items, onChange}) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    marginHorizontal: -8,
+    marginHorizontal: -4,
     flexWrap: 'wrap',
   },
   button: {
