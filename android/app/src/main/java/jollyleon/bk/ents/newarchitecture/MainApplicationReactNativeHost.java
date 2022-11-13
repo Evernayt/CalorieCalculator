@@ -1,4 +1,4 @@
-package com.caloriecalculator.newarchitecture;
+package jollyleon.bk.ents.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.caloriecalculator.BuildConfig;
-import com.caloriecalculator.newarchitecture.components.MainComponentsRegistry;
-import com.caloriecalculator.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import jollyleon.bk.ents.BuildConfig;
+import jollyleon.bk.ents.newarchitecture.components.MainComponentsRegistry;
+import jollyleon.bk.ents.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

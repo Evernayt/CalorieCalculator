@@ -1,4 +1,4 @@
-package com.caloriecalculator;
+package jollyleon.bk.ents;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

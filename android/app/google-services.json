@@ -1,62 +1,33 @@
 {
   "project_info": {
-    "project_number": "1084935728789",
-    "project_id": "delta-soft-test-99b27",
-    "storage_bucket": "delta-soft-test-99b27.appspot.com"
+    "project_number": "372675337952",
+    "project_id": "jullimu-80dad",
+    "storage_bucket": "jullimu-80dad.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1084935728789:android:e65176a0a2d953e7f5359c",
+        "mobilesdk_app_id": "1:372675337952:android:41d9bd3fac6c1dc2eb7a85",
         "android_client_info": {
-          "package_name": "com.caloriecalculator"
+          "package_name": "jollyleon.bk.ents"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1084935728789-ip0qvso44urgblcsciq546h524netrks.apps.googleusercontent.com",
+          "client_id": "372675337952-o988jea39vfrkku55b77t65jm3ft7k2c.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD-wFASmf9pQiU98BKJAlV8W3pSP-D-8Z4"
+          "current_key": "AIzaSyCZaHme-nIWS_cm0kCQz6yczzmigcV6Zuo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1084935728789-ip0qvso44urgblcsciq546h524netrks.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1084935728789:android:e7624ce687d6f285f5359c",
-        "android_client_info": {
-          "package_name": "com.sportsquiz"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1084935728789-ip0qvso44urgblcsciq546h524netrks.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD-wFASmf9pQiU98BKJAlV8W3pSP-D-8Z4"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1084935728789-ip0qvso44urgblcsciq546h524netrks.apps.googleusercontent.com",
+              "client_id": "372675337952-o988jea39vfrkku55b77t65jm3ft7k2c.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

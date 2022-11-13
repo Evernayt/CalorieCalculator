@@ -1,6 +1,6 @@
-import WebComponent from './WebComponent';
 import Button from './UI/Button';
 import RectRadioButton from './UI/RectRadioButton';
 import Input from './UI/Input';
+import LeonButton from './UI/LeonButton';
 
-export {WebComponent, Button, RectRadioButton, Input};
+export {Button, RectRadioButton, Input, LeonButton};

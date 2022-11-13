@@ -1,4 +1,4 @@
-package com.caloriecalculator.newarchitecture.components;
+package jollyleon.bk.ents.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;
